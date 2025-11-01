@@ -3,7 +3,7 @@ import Hero from "./Hero";
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen p-15">
+    <div className="flex flex-col min-h-screen p-15 ">
       {/* Main Section */}
       <div className="flex flex-col md:flex-row items-center justify-between flex-grow px-8 mt-10 space-x-6">
         {/* Left side - Hero content */}
