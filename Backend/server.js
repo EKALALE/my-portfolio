@@ -7,13 +7,13 @@ import contactRoutes from "./routes/contactRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({origin: "http://localhost:5173",}));
 app.use(express.json());
 
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB connected successfully"))
+  .then(() => console.log("✅ MongoDB connected successfully !!"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Routes

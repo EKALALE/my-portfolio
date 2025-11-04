@@ -1,31 +1,28 @@
-import nodemailer from "nodemailer";
-import Contact from "../models/Contact.js";
+// Backend/controllers/contactController.js
+import Contact from "../models/contact.js";
+import { sendEmail } from "../utils/sendEmail.js";
 
 export const submitContactForm = async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
-    // Save to database
+    // 1️⃣ Save the message in the database
     const newContact = new Contact({ name, email, message });
     await newContact.save();
 
-    // Send email using Gmail
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    // 2️⃣ Send email to YOU
+    await sendEmail(
+      process.env.EMAIL_USER,
+      `New message from ${name}`,
+      `Email: ${email}\n\nMessage:\n${message}`
+    );
 
-    const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // sends message to you
-      subject: `New message from ${name}`,
-      text: `Email: ${email}\n\nMessage:\n${message}`,
-    };
-
-    await transporter.sendMail(mailOptions);
+    // 3️⃣ Send thank-you email to CLIENT
+    await sendEmail(
+      email,
+      "Thanks for contacting me!",
+      `Hello ${name},\n\nThanks for reaching out through my portfolio. I’ve received your message and will get back to you soon.\n\nBest regards,\nPhilip Ekalale`
+    );
 
     res.status(200).json({ message: "Message sent successfully!" });
   } catch (error) {
