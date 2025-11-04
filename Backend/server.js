@@ -7,7 +7,10 @@ import contactRoutes from "./routes/contactRoutes.js";
 dotenv.config();
 
 const app = express();
-app.use(cors({origin: "http://localhost:5173",}));
+app.use(cors({origin: ["http://localhost:5173", "https://portfolio-backend-2ea6.onrender.com"],
+    methods: ["GET", "POST"],
+
+}));
 app.use(express.json());
 
 // Connect to MongoDB
