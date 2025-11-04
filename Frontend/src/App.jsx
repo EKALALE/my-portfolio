@@ -7,11 +7,14 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function App() {
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-200 text-gray-100 ">
+    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100 ">
        <Navbar/> 
       <main className="flex-grow">
         <Routes>
@@ -20,7 +23,9 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        
       </main>
+      <ToastContainer position="top-center" autoClose={3000} />
       <Footer />
     </div>
   );
