@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://porfolio-frontend-backend.vercel.app",
+      "https://ekalalesportfolio.vercel.app",
     ],
     methods: ["GET", "POST"],
   })

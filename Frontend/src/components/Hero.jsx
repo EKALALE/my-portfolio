@@ -6,7 +6,7 @@ function Hero() {
       <h1 className="text-3xl md:text-5xl font-bold text-blue-600 mb-4">
         Hello, I'm Philip
       </h1>
-      <p className="text-lg md:text-xl text-gray-700 mb-6">
+      <p className="text-lg md:text-xl text-gray-200 mb-6">
         A passionate web developer and Graphic designer who loves crafting clean ,creative and visually stunning websites using React, Tailwind, and Express.
       </p>
 
