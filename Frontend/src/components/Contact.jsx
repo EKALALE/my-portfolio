@@ -9,11 +9,21 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Email validation function (must include '@' and '.')
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // ✅ Validate email before sending
+    if (!validateEmail(formData.email)) {
+      toast.error("❌ Please enter a valid email address (e.g. example@gmail.com)");
+      return;
+    }
+
     try {
       await axios.post("https://portfolio-backend-2ea6.onrender.com/api/contact", formData);
-      toast.success("✅ Message sent successfully!");
+      toast.success(" Message sent successfully!");
       setFormData({ name: "", email: "", message: "" }); // reset form
     } catch (error) {
       console.error("Error sending message:", error);
@@ -22,7 +32,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-8 bg-gray-800">
+    <section id="contact" className="py-20 px-8 bg-gray-800 text-white">
       <h2 className="text-3xl font-bold text-blue-400 mb-6 text-center">Contact Me</h2>
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto flex flex-col space-y-4">
         <input
