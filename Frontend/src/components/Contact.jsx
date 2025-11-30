@@ -52,7 +52,7 @@ export default function Contact() {
             {/* Email Card */}
             <motion.a
               whileHover={{ scale: 1.03 }}
-              href="mailto:philipkalale55@gmail.com"
+              href="mailto:philipekalale07@gmail.com"
               className="block p-5 rounded-xl bg-gray-700 hover:bg-gray-600 border border-gray-600 transition shadow"
             >
               <h4 className="text-xl font-medium text-blue-300">📧 Email</h4>
@@ -62,7 +62,7 @@ export default function Contact() {
             {/* Phone Card */}
             <motion.a
               whileHover={{ scale: 1.03 }}
-              href="tel:+254740764145"
+              href="tel:+254701658447"
               className="block p-5 rounded-xl bg-gray-700 hover:bg-gray-600 border border-gray-600 transition shadow"
             >
               <h4 className="text-xl font-medium text-blue-300">📞 Phone</h4>
