@@ -1,31 +1,34 @@
-import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
-
 export default function Projects() {
   const projects = [
     {
       title: "PesaGuard",
       desc: "A budget management system built with React, Express, MongoDB and JWT authentication.",
-      live: "#",
-      code: "#"
+      link: "",
     },
     {
       title: "Meal Finder",
       desc: "A fast recipe finder app using the MealDB API, fully responsive with Tailwind.",
-      live: "#",
-      code: "#"
+      link: "",
     },
     {
       title: "E-commerce DB",
       desc: "A complete relational database schema for an e-commerce store using MySQL.",
-      live: "#",
-      code: "#"
+      link: "",
     },
     {
-      title: "Bandits Surveillance System",
-      desc: "AI-assisted security system for tracking threats, predicting attack locations, and alert automation.",
-      live: "#",
-      code: "#"
+      title: "UlinziTracker",
+      desc: "A community-safety application where users can report crime incidents and officers can track and respond to them.",
+      link: "",
+    },
+    {
+      title: "Bursary Management System",
+      desc: "A collaborated project where students apply for funds, then staff or village administrators verify and approve them for further allocation. It reduces paperwork and improves transparency.",
+      link: "https://bursary-management-system-1xwi.onrender.com",
+    },
+    {
+      title: "Unigate Access",
+      desc: "A collaborated university gate access project where students enter campus by having the system scan their QR codes for secure and faster access.",
+      link: "",
     },
   ];
 
@@ -38,10 +41,8 @@ export default function Projects() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
         {projects.map((project, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={false}               // ✅ no initial/fade-in animation
-            whileHover={{ scale: 1.02 }}  // subtle hover scale
             className="relative backdrop-blur-xl rounded-3xl p-6 shadow-lg border border-gray-700 
                        bg-gray-800/60 hover:border-blue-400 transition-all"
           >
@@ -55,26 +56,27 @@ export default function Projects() {
 
             <p className="text-gray-300 mb-6">{project.desc}</p>
 
-            <div className="flex gap-4">
-              <a
-                href={project.live}
-                target="_blank"
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 
-                           text-white rounded-xl transition shadow"
-              >
-                <ExternalLink size={18} /> Live Demo
-              </a>
-
-              <a
-                href={project.code}
-                target="_blank"
-                className="flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 
-                           text-white rounded-xl transition shadow"
-              >
-                <Github size={18} /> Code
-              </a>
+            <div className="pt-2">
+              {project.link ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex rounded-xl bg-blue-600 px-5 py-2.5 text-white shadow transition hover:bg-blue-700"
+                >
+                  View Project
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  disabled
+                  className="rounded-xl bg-blue-600/50 px-5 py-2.5 text-white/80 shadow"
+                >
+                  Coming Soon
+                </button>
+              )}
             </div>
-          </motion.div>
+          </div>
         ))}
 
       </div>
