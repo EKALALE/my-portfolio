@@ -19,7 +19,7 @@ export default function Footer() {
           <Linkedin size={24} />
         </a>
     
-        <a href="https://github.com/Ekalale" target="_blank" rel="noopener noreferrer"
+        <a href="https://github.com/EKALALE" target="_blank" rel="noopener noreferrer"
            className="text-gray-400 hover:text-white transition">
           <Github size={24} />
         </a>
