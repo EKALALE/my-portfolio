@@ -17,7 +17,7 @@ function Hero() {
         I specialize in building modern applications using{" "}
         <span className="text-cyan-400 font-medium">React</span>,{" "}
         <span className="text-green-400 font-medium">Django</span>,{" "}
-        <span className="text-purple-400 font-medium">Bootstrap</span>,{" "}
+        <span className="text-purple-400 font-medium">Bootstrap-styling</span>,{" "}
         <span className="text-yellow-400 font-medium">Express</span>, and{" "}
         <span className="text-pink-400 font-medium">Tailwind CSS</span>.
       </p>
