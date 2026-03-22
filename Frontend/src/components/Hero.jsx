@@ -35,10 +35,11 @@ function Hero() {
         {/* Download CV */}
         <a
           href="/cv.pdf"
-          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
         >
-          Download CV
+          Preview CV
         </a>
       </div>
     </section>
