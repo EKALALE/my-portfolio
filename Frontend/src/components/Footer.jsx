@@ -6,23 +6,20 @@ export default function Footer() {
       
       {/* Social Icons */}
       <div className="flex justify-start gap-6 mb-4 px-6">
-        <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"
+        <a href="https://facebook.com/philip.nnake" target="_blank" rel="noopener noreferrer"
            className="text-gray-400 hover:text-blue-600 transition">
           <Facebook size={24} />
         </a>
-        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"
+        <a href="https://instagram.com/philipnnake?igsh=YmRlYnc0dWJ6eDNx" target="_blank" rel="noopener noreferrer"
            className="text-gray-400 hover:text-pink-500 transition">
           <Instagram size={24} />
         </a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"
+        <a href="https://linkedin.com/in/philip-ekalale" target="_blank" rel="noopener noreferrer"
            className="text-gray-400 hover:text-blue-400 transition">
           <Linkedin size={24} />
         </a>
-        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"
-           className="text-gray-400 hover:text-sky-400 transition">
-          <Twitter size={24} />
-        </a>
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"
+    
+        <a href="https://github.com/Ekalale" target="_blank" rel="noopener noreferrer"
            className="text-gray-400 hover:text-white transition">
           <Github size={24} />
         </a>
