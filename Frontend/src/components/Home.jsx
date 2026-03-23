@@ -5,14 +5,14 @@ function Home() {
   return (
     <div className="flex flex-col min-h-screen px-5 py-6 md:px-10 md:py-10">
       {/* Main Section */}
-      <div className="flex flex-col md:flex-row items-center justify-center flex-grow gap-3 md:gap-6 mt-2 md:mt-6">
+      <div className="flex flex-col md:flex-row items-center justify-center flex-grow gap-3 md:gap-2 lg:gap-4 mt-2 md:mt-6">
         {/* Left side - Hero content */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-[55%]">
           <Hero />
         </div>
 
         {/* Right side - Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div className="w-full md:w-[45%] flex justify-center">
           <img
             src={myPhoto}
             alt="My portrait"
