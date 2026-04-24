@@ -3,7 +3,7 @@ export default function Projects() {
     {
       title: "PesaGuard",
       desc: "A budget management system built with React, Express, MongoDB and JWT authentication.",
-      link: "",
+      link: "https://wise-coin-compass-kt7r.vercel.app/",
     },
     {
       title: "Meal Finder",
